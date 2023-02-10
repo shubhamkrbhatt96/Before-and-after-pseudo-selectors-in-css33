@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo selectors in css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            
+          
+        }
+
+        section {
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            flex-direction: column;
+            margin: 3px 23px;
+            align-items: center;
+            height: 422px;
+            justify-content: center;
+        }
+
+        /* Using the Css before and after selectors here. */
+        section::before {
+            /* Same goes with after selector here also which comes after the section component here. */
+            content: "This is a content";
+        }
+
+        .navigation {
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            display: flex;
+        }
+
+        header::before{
+            background: url('image/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+            /* content is nothing here. */
+            content: "";
+            /* We need to keep the position absolute here */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* This opacity features dilutes the background image formation or image effect. */
+            opacity: 0.7;
+        }
+
+        li {
+            list-style: none;
+            padding: 20px 23px;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- nav.navbar -->
+        <nav class="navbar">
+            <ul class="navigation">
+                <!-- li.item*4 -->
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Kept the section out of the header area here. -->
+    <section>
+        <!-- Inside section area we have kept the Header h1 and paragraph p here which is shown on site. -->
+        <h1>Welcome to the coding World.</h1>
+        <p>He is the beginner in this domain . want to learn the basics of that topic. Still struggling with the
+            fundamentals of tbat topic. At the end he has taken tuition to outgrow his knowlecge in this domain. And
+            ultimately he performed well in this domain and technology.</p>
+    </section>
+    <!-- To put a line after the section we used the hr tag here to make a line after section area -->
+    <!-- <hr> -->
+</body>
+
+</html>
